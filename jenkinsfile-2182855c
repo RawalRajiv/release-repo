@@ -50,14 +50,21 @@ pipeline {
     
     stage('2182855C-Stage6') {
     
-      when {
-        not {
-          abort
-        }
-      }
-      
       steps {
-        sh 'echo "2182855C - work Releases to Prod Environment"'
+    
+        script {
+        
+          if (true) {
+            echo '2182855C - Work Release to Production Environment'
+          }
+          else {
+          
+            echo '2182855C - Work Release aborted'
+          
+          }
+        
+        }
+    
       }
     
     }
