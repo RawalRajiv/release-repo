@@ -37,9 +37,31 @@ pipeline {
             sh 'echo "App Test2 Success - 2182855C Stage 4B Completed"'
           }
         }
-        
-      }      
+      }
     }
+    
+    stage('2182855C-Stage5') {
+    
+      steps {
+        input('Proceed to release the work to Prod Env?')
+      }   
+    
+    }
+    
+    stage('2182855C-Stage6') {
+    
+      when {
+        not {
+          sh 'echo "2182855C - work Releases aborted"'
+        }
+      }
+      
+      steps {
+        sh 'echo "2182855C - work Releases to Prod Environment"'
+      }
+    
+    }
+    
   
   }
 
