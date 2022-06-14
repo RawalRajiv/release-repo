@@ -21,6 +21,25 @@ pipeline {
                 sh 'docker rm -f 2182855c-container; docker run -d -it --name=2182855c-container 2182855c-image; echo Application Setup-2182855C Stage3 Completed'
             }
     }
+    
+    stage('2182855C-Stage4') {
+
+      parallel {
+
+        stage('2182855C-Test1') {
+          steps {
+            sh 'echo "App Test1 Success - 2182855C Stage 4A Completed"'
+          }
+        }
+
+        stage('Execute Shell') {
+          steps {
+            sh 'echo "App Test2 Success - 2182855C Stage 4B Completed"'
+          }
+        }
+        
+      }      
+    }
   
   }
 
