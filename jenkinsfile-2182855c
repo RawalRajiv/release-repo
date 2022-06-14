@@ -1,1 +1,21 @@
+pipeline {
 
+  agent any
+  
+  stages {
+  
+    stage('2182855C-Stage1') {
+            steps {
+                sh 'echo "Start of pipeline - 2182855C Stage1 Completed"'
+            }
+        }
+        
+    stage('2182855C-Stage2') {
+            steps {
+                sh 'echo "Start of pipeline - 2182855C Stage2 Completed"'
+            }
+        }
+  
+  }
+
+}
