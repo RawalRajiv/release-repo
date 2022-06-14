@@ -52,9 +52,7 @@ pipeline {
     
       when {
         not {
-          steps {
-            sh 'echo "2182855C - work Releases aborted"'
-          }
+          abort
         }
       }
       
