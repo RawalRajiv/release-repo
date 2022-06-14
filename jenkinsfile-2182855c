@@ -18,7 +18,7 @@ pipeline {
     
     stage('2182855C-Stage3') {
       steps {
-                sh 'docker run -d -it --name=2182855c-container 2182855c-image'
+                sh 'sudo docker run -d -it --name=2182855c-container 2182855c-image'
             }
     }
   
